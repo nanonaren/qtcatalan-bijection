@@ -11,7 +11,6 @@ import qualified Data.Map as M
 import Math.Combinat.Classes (HasDuality(dual))
 import Math.Combinat.Partitions.Integer (Partition, fromPartition, mkPartition)
 import qualified Data.IntMap.Strict as I
-import qualified GHC.TypeLits as steps
 
 ----------------------------------------------------------------------
 -- Dyck paths and some properties.
