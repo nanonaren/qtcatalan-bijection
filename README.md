@@ -25,7 +25,7 @@ The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/m
 69
 ```
 
-## Map any path in B(n)
+## Map any path in AF(n)
 
 Download the executable `phi-linux` from [here](https://github.com/nanonaren/qtcatalan-bijection/releases/tag/v0.1.0). For example, to compute Phi of the path `[0,1,2,3,4,5,6,2,2,2,0]` in n=11
 
