@@ -1,21 +1,23 @@
 # An area-bounce exchanging bijection on a large subset of Dyck paths
 
-This repository implements the bijection presented [here](https://arxiv.org/abs/2401.14668).
+This repository implements the bijection presented [here](https://arxiv.org/abs/2401.14668), Section 3. It also verifies that bounce-minimal paths are mapped to area-minimal paths under this bijection.
+
+Dyck paths are represented as lists of 0s and 1s, where 0 represents an up step and 1 represents a right step.
 
 ## Examples
-The [examples folder](https://github.com/nanonaren/qtcatalan-bijection/tree/main/examples) contains the bijection enumerated for various n. These are contained in the files named `nk.txt`. Each row in this file looks like
+The [examples folder](https://github.com/nanonaren/qtcatalan-bijection/tree/main/examples) contains the bijection enumerated for various values of $n$. These are contained in the files named `nk.txt`, where k is the size. Each row in this file looks like
 
 ```
 True 9 2 [0,1,2,3,1,2] [0,0,1,0,1,0]
 ```
 The columns are as follows
-* The 4th column is a dyck path d having area >= bounce.
+* The first column is `True` if the bounce-minimal, i.e., if $d \in \mathcal{B}(n)$ and equivalently $\Phi(d) \in \mathcal{A}(n)$.
 * The 2nd column is the area of d.
 * The 3rd column is the bounce of d.
-* The 5th column is Phi(d).
-* The first column is `True` if the bounce value is minimal given the area, i.e., if d in B(n).
+* The 4th column is a Dyck path d in $\mathcal{AF}_n$.
+* The 5th column is $\Phi(d)$.
 
-The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/main/examples/minimal_counts.txt) contains the number of paths in B(n). For example, we can verify that every path in B(10) has been mapped by Phi as follows
+The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/main/examples/minimal_counts.txt) contains the number of paths in $\mathcal{B}(n)$. For example, we can verify that every path in $\mathcal{B}(10)$ has been mapped by $\Phi$ as follows
 
 ```bash
 > cat examples/minimal_counts.txt | grep "^10"
@@ -25,9 +27,9 @@ The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/m
 69
 ```
 
-## Map any path in AF(n)
+## Map any path in $\mathcal{AF}_n$
 
-Download the executable `phi-linux` from [here](https://github.com/nanonaren/qtcatalan-bijection/releases/tag/v0.1.0). For example, to compute Phi of the path `[0,1,2,3,4,5,6,2,2,2,0]` in n=11
+Download the executable `phi-linux` from [here](https://github.com/nanonaren/qtcatalan-bijection/releases/tag/v0.1.0). For example, to compute $\Phi$ of the path `[0,1,2,3,4,5,6,2,2,2,0]` in $n=11$
 
 ```bash
 > echo "[0,1,2,3,4,5,6,2,2,2,0]" | ./phi-linux
