@@ -350,7 +350,7 @@ example n = writeFile ("examples/n" ++ show n ++ ".txt") .
   let (a,b) = (area d, bounce d)
   guard (a >= b)
   case aCountMap d of
-    Just (_, _, d') -> return [show (isMin a b), show (area d), show (bounce d), show d, show d']
+    Just (_, _, d') -> return [show d, show d', show (area d), show (bounce d), show (isMin a b)]
     _ -> mzero
   where mins = minimals n
         isMin a b = I.findWithDefault 0 a mins == b
@@ -370,14 +370,14 @@ writeExamples = do
 -- Given path d having area >= bounce, returns Phi(d), if possible.
 ----------------------------------------------------------------------
 
--- main = writeExamples
+main = writeExamples
 
-main :: IO ()
-main = interact $
-  unlines .
-  fmap (show .
-        fmap (\(_, _, d') -> d') .
-        aCountMap .
-        fromAreaSequence' .
-        read) .
-  lines
+-- main :: IO ()
+-- main = interact $
+--   unlines .
+--   fmap (show .
+--         fmap (\(_, _, d') -> d') .
+--         aCountMap .
+--         fromAreaSequence' .
+--         read) .
+--   lines
