@@ -11,13 +11,13 @@ The [examples folder](https://github.com/nanonaren/qtcatalan-bijection/tree/main
 True 9 2 [0,1,2,3,1,2] [0,0,1,0,1,0]
 ```
 The columns are as follows
-* The first column is `True` if the bounce-minimal, i.e., if $d \in \mathcal{B}(n)$ and equivalently $\Phi(d) \in \mathcal{A}(n)$.
+* The first column is `True` if the bounce-minimal, i.e., if ![equation](https://latex.codecogs.com/svg.image?d\in\mathcal{B}(10)) and equivalently ![equation](https://latex.codecogs.com/svg.image?\Phi(d)\in\mathcal{A}_n).
 * The 2nd column is the area of d.
 * The 3rd column is the bounce of d.
-* The 4th column is a Dyck path d in $\mathcal{AF}_n$.
+* The 4th column is a Dyck path d in ![equation](https://latex.codecogs.com/svg.image?\mathcal{AF}_n).
 * The 5th column is $\Phi(d)$.
 
-The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/main/examples/minimal_counts.txt) contains the number of paths in $\mathcal{B}(n)$. For example, we can verify that every path in $\mathcal{B}(10)$ has been mapped by $\Phi$ as follows
+The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/main/examples/minimal_counts.txt) contains the number of paths in $\mathcal{B}(n)$. For example, we can verify that every path in ![equation](https://latex.codecogs.com/svg.image?\mathcal{B}(10)) has been mapped by $\Phi$ as follows
 
 ```bash
 > cat examples/minimal_counts.txt | grep "^10"
@@ -27,7 +27,7 @@ The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/m
 69
 ```
 
-## Map any path in $\mathcal{AF}_n$
+## Map any path in ![equation](https://latex.codecogs.com/svg.image?\mathcal{AF}_n)
 
 Download the executable `phi-linux` from [here](https://github.com/nanonaren/qtcatalan-bijection/releases/tag/v0.1.0). For example, to compute $\Phi$ of the path `[0,1,2,3,4,5,6,2,2,2,0]` in $n=11$
 
