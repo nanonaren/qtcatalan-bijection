@@ -17,7 +17,7 @@ The columns are as follows
 * The 4th column is the bounce of $d$.
 * The 5th column is `True` if $d$ is bounce-minimal, i.e., if ![equation](https://latex.codecogs.com/svg.image?d\in\mathcal{B}(10)) and equivalently ![equation](https://latex.codecogs.com/svg.image?\Phi(d)\in\mathcal{A}_n).
 
-The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/main/examples/minimal_counts.txt) contains the number of paths in $\mathcal{B}(n)$. For example, we can verify that every path in ![equation](https://latex.codecogs.com/svg.image?\mathcal{B}(10)) has been mapped by $\Phi$ as follows
+The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/main/examples/minimal_counts.txt) contains the number of paths in ![equation](https://latex.codecogs.com/svg.image?\mathcal{B}(n)). For example, we can verify that every path in ![equation](https://latex.codecogs.com/svg.image?\mathcal{B}(10)) has been mapped by $\Phi$ as follows
 
 ```bash
 > cat examples/minimal_counts.txt | grep "^10"
