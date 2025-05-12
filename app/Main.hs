@@ -370,14 +370,14 @@ writeExamples = do
 -- Given path d having area >= bounce, returns Phi(d), if possible.
 ----------------------------------------------------------------------
 
-main = writeExamples
+-- main = writeExamples
 
--- main :: IO ()
--- main = interact $
---   unlines .
---   fmap (show .
---         fmap (\(_, _, d') -> d') .
---         aCountMap .
---         fromAreaSequence' .
---         read) .
---   lines
+main :: IO ()
+main = interact $
+  unlines .
+  fmap (show .
+        fmap (\(_, _, d') -> d') .
+        aCountMap .
+        fromAreaSequence' .
+        read) .
+  lines

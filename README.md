@@ -29,9 +29,12 @@ The [minimal_counts.txt](https://github.com/nanonaren/qtcatalan-bijection/blob/m
 
 ## Map any path in ![equation](https://latex.codecogs.com/svg.image?\mathcal{AF}_n)
 
-Download the executable `phi-linux` from [here](https://github.com/nanonaren/qtcatalan-bijection/releases/tag/v0.1.0). For example, to compute $\Phi$ of the path `[0,1,2,3,4,5,6,2,2,2,0]` in $n=11$
+Download the executable `phi-linux` from [here](https://github.com/nanonaren/qtcatalan-bijection/releases/tag/v0.1.0). For example, to compute $\Phi$ of some paths
 
 ```bash
-> echo "[0,1,2,3,4,5,6,2,2,2,0]" | ./phi-linux
+> echo -e "[0,1,2,3,4,5]\n[0,1,2,3,4,5,6,2,2,2,0]\n[0,1,2,2,2,2]\n[0,1,2,3,1,1]" | cabal exec phi-code
+Just [0,0,0,0,0,0]
 Just [0,1,2,0,0,1,0,0,1,0,0]
+Nothing
+Just [0,1,0,0,1,0]
 ```
