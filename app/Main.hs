@@ -350,7 +350,7 @@ example n = writeFile ("examples/n" ++ show n ++ ".txt") .
   let (a,b) = (area d, bounce d)
   guard (a >= b)
   case aCountMap d of
-    Just (_, _, d') -> return [show d, show d', show (area d), show (bounce d), show (isMin a b)]
+    Just (_, _, d') -> return [show (toBinWord d), show (toBinWord d'), show (area d), show (bounce d), show (isMin a b)]
     _ -> mzero
   where mins = minimals n
         isMin a b = I.findWithDefault 0 a mins == b
@@ -366,6 +366,10 @@ writeExamples = do
     [1..15]
   mapM_ example [1..15]
 
+toBinWord = fmap (\b -> if b then 1 else 0) . getDyckPath
+fromBinWord = fromMaybe (error "Not a Dyck path") .
+              fromSequence . fmap (==1)
+
 ----------------------------------------------------------------------
 -- Given path d having area >= bounce, returns Phi(d), if possible.
 ----------------------------------------------------------------------
@@ -376,8 +380,8 @@ main :: IO ()
 main = interact $
   unlines .
   fmap (show .
-        fmap (\(_, _, d') -> d') .
+        fmap (\(_, _, d') -> toBinWord d') .
         aCountMap .
-        fromAreaSequence' .
+        fromBinWord .
         read) .
   lines
