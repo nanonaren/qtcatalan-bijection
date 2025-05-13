@@ -2,7 +2,7 @@
 
 This repository implements the bijection presented [here](https://arxiv.org/abs/2401.14668), Section 3. It also verifies that bounce-minimal paths are mapped to area-minimal paths under this bijection.
 
-Dyck paths are represented as lists of 0s and 1s, where 0 represents an up step and 1 represents a right step.
+Dyck paths are represented as lists of 0s and 1s, where 1 represents an up step and 0 represents a right step.
 
 ## Examples
 The [examples folder](https://github.com/nanonaren/qtcatalan-bijection/tree/main/examples) contains the bijection enumerated for various values of $n$. These are contained in the files named `nk.txt`, where k is the size. Each row in this file looks like
