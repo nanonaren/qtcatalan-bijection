@@ -8,7 +8,7 @@ Dyck paths are represented as lists of 0s and 1s, where 0 represents an up step 
 The [examples folder](https://github.com/nanonaren/qtcatalan-bijection/tree/main/examples) contains the bijection enumerated for various values of $n$. These are contained in the files named `nk.txt`, where k is the size. Each row in this file looks like
 
 ```
-[0,1,2,3,1,2] [0,0,1,0,1,0] 9 2 True
+[1,1,1,1,0,0,1,0,0,1,0,0] [1,1,0,0,1,0,1,0,1,1,0,0] 9 2 True
 ```
 The columns are as follows
 * The 1st column is a Dyck path ![equation](https://latex.codecogs.com/svg.image?d\in\mathcal{AF}_n).
